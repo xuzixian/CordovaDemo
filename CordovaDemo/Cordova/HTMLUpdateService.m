@@ -35,17 +35,11 @@ NSString * const kHTMLUpdateServiceUpdateSuccessNotification = @"kHTMLUpdateServ
 }
 
 - (void)checkUpdateIfNeedDownload{
-//    NSString *versionFilePath = [NSString stringWithFormat: @"%@/version", self.htmlContentFolder];
-//    NSData *versionData = [[NSData alloc] initWithContentsOfFile: versionFilePath];
-//    NSDictionary *versionInfo = [NSJSONSerialization JSONObjectWithData:versionData options:NSJSONReadingAllowFragments error:NULL];
-//    if (versionInfo && versionInfo.count > 0){
-//        NSString *version = [versionInfo objectForKey: @"version"];
-//    }
     NSLog(@"tmpPath = %@", [self tmpUpdateFilePath]);
     NSLog(@"BundlePath = %@", self.htmlContentBundlePath);
     NSLog(@"WorkPath = %@", self.htmlContentWorkPath);
     NSLog(@"NeedUpdatePath = %@", self.htmlContentNeedUpdatePath);
-//    [self.downloadManager downloadFileWithUrl:@"http://ocplp2ovf.bkt.clouddn.com/1.4.zip" filePath:[self tmpUpdateFilePath]];
+//    [self.downloadManager downloadFileWithUrl:@"http://ocplp2ovf.bkt.clouddn.com/1.5.zip" filePath:[self tmpUpdateFilePath]];
 }
 
 #pragma mark - SYAPICallBackDelegate, SYAPIManagerParamSource
