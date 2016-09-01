@@ -1,2 +1,3 @@
 # CordovaDemo
-折腾cordova
+
+用之前别忘了pod install

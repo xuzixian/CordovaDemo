@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Capture Photo</title>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            
+            //简单跟OC交互，没有回调
+            //function test()
+            //{
+            //   options={quality:"200"};
+            //    cordova.exec(null,null,'HelloWorld','sayHello',[options]);
+            //}
+            function openTest(){
+                window.location.href = "redlicheehtmlschemes://";
+            }
+            
+            function test(sender)
+            {
+                cordova.exec(
+                             function(result){
+                                var s=result;
+                                alert(s);
+                             },
+                             function(error)
+                             {
+                                alert("error",error);
+                             }
+                             ,'HTMLPlugin','open',[sender]);
+            }
+        </script>
+    </head>
+    <body>
+        <p>1</P>
+        <button onclick="test('local://');">LOCAL</button> <br>
+        <button onclick="test('remote://');">REMOTE</button> <br>
+        <button onclick="test('native://');">NATIVE</button> <br>
+        <button onclick="openTest();">SCHEME</button> <br>
+    </body>
+</html>
